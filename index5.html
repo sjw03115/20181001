@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>새장을 연속으로 바꾸기</title>
+	<style  type="text/css">
+#logo { margin-bottom: 50px; text-align: center; background: #231f20; }
+
+		#flower{width:300px; height: 400px;background: url('flower1.jpg'); background-size: cover; text-align: center; margin: auto; 
+			}
+
+
+		#next{width: 140px; height: 75px; background-color: #cf112b; margin-left: 100px; margin-bottom: 100px;border:0px; outline: 0px; }
+		#prev{width: 140px; height: 75px; background-color: #cf112b; margin-right: 100px; margin-bottom: 100px;border:0px; outline: 0px; }
+
+		#moracano{width:100px; height: 100px; margin-left:0px text-align: left; margin-top:10px    ;display: block; animation:myMove 2s linear infinite;
+			animation-play-state: paused;
+		}
+		#moracano:hover{cursor: pointer;}
+
+		@keyframes myMove {
+    		from {}
+ 			to {transform: rotateY(360deg);
+ 				/*rotate3d(x,y,z,angle)*/}
+			}
+
+
+		body{text-align: center; margin:auto; }
+
+		.button{background: #231f20; margin-top: 20px; }
+
+	</style>
+
+</head>
+<body>
+
+
+	<div id="logo">
+<img src="perfumeShop.png" style="width:200px;"> </div>
+	<img id="moracano" src="ddoo.png" ></div>
+	<script type="text/javascript">
+	moracano.onclick = function(){
+	moracano.style.animationPlayState = "running";}</script>
+	<div id="flower"></div>
+	
+	
+
+	<div class= "button">
+
+	<button id="prev"></button>
+	<button id="next"></button>
+</div>
+
+	<script type="text/javascript">
+
+		var currentFlower = 1;
+
+		next.onclick = function(){
+
+			if(currentFlower == 1){
+				flower.style.background = "url('flower2.jpg')";
+				currentFlower = 2;
+			}else if(currentFlower == 2){
+				flower.style.background = "url('flower3.jpg')"; currentFlower = 3;
+
+			}else if(currentFlower == 3){
+				flower.style.background = "url('flower4.jpg')"; currentFlower = 4;
+
+			}else if(currentFlower == 4){
+				flower.style.background = "url('flower5.jpg')"; currentFlower = 5;
+
+			}else if(currentFlower == 5){
+				flower.style.background = "url('flower1.jpg')"; currentFlower = 1;
+
+			}
+			flower.style.backgroundSize = "cover";
+		}
+				prev.onclick = function(){
+			if(currentFlower == 1){
+				flower.style.background = "url('flower5.jpg')";
+				currentFlower = 5;
+			}else if(currentFlower == 2){
+				flower.style.background = "url('flower1.jpg')"; currentFlower = 1;
+
+			}else if(currentFlower == 3){
+				flower.style.background = "url('flower2.jpg')"; currentFlower = 2;
+
+			}else if(currentFlower == 4){
+				flower.style.background = "url('flower3.jpg')"; currentFlower = 3;
+
+			}else if(currentFlower == 5){
+				flower.style.background = "url('flower4.jpg')"; currentFlower = 4;
+
+			}
+
+			state = 0;
+		
+					
+				}
+
+
+		
+			
+		
+		
+
+
+
+	</script>
+
+
+</body>
+</html>
